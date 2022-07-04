@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: auto;
+}
+
+span {
+  margin: 0 16px;
+}

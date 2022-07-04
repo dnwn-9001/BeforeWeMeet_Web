@@ -1,0 +1,42 @@
+/* Global*/
+:root {
+  /* Color */
+  --color-yellow: #ffe082;
+  --color-orange: #ff8a65;
+  --color-light-orange: #ffbb93;
+  --color-light-white: #eeeeee;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-medium: 500;
+  --weight-regular: 400;
+
+  /* Animation */
+  --animation-duration: 300ms;
+}
+
+.body__contents {
+  width: 1400px;
+  margin: auto;
+}
+
+h1 {
+  border-bottom: 2px solid var(--color-orange);
+  padding: 10px;
+}
+
+footer {
+  height: 200px;
+  background-color: var(--color-light-grey);
+}

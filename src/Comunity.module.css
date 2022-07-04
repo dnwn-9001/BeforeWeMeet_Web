@@ -1,0 +1,20 @@
+.comunity__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comunity__more {
+  height: 50px;
+  cursor: pointer;
+}
+
+.comunity__board__dtl {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.comunity__board__dtl__box {
+  margin-left: 25px;
+}

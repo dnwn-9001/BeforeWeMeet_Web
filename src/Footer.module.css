@@ -8,4 +8,9 @@
 
 span {
   margin: 0 16px;
+  cursor: pointer;
+}
+
+.footer__dtl {
+  margin-top: 50px;
 }

@@ -6,7 +6,7 @@
   margin: auto;
 }
 
-span {
+.footer__dtl span {
   margin: 0 16px;
   cursor: pointer;
 }

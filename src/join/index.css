@@ -1,0 +1,15 @@
+#register {
+  margin: 100px 350px 0 0;
+}
+
+.ant-btn.ant-btn-primary.ant-btn-lg {
+  border-color: var(--color-yellow);
+  background-color: var(--color-yellow);
+  color: var(--color-dark-grey);
+}
+
+.ant-btn.ant-btn-primary.ant-btn-lg:hover {
+  border-color: var(--color-yellow);
+  background-color: var(--color-yellow);
+  color: #ffffff;
+}

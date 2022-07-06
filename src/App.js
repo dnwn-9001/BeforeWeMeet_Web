@@ -1,33 +1,41 @@
-import logo from "./logo.svg";
-import "./Common.css";
-import Logo from "./Logo";
-import Contents from "./Contents";
-import Comunity from "./Comunity";
-import Footer from "./Footer";
+import "antd/dist/antd.css";
+import "./common/Common.css";
+import Logo from "./common/Logo";
+import Footer from "./common/Footer";
+import { Contents } from "./main";
+import LoginPage from "./login";
+import JoinPage from "./join";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header id="header">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Orbitron&family=PT+Sans:wght@400;700&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;700&family=Sunflower:wght@300;500;700&display=swap"
-          rel="stylesheet"
-        />
-      </header>
-
-      <body>
+      <div id="header">
         <Logo />
-        <div className="body__contents">
-          <Contents />
-          <Comunity />
-        </div>
-      </body>
+      </div>
 
-      <footer>
+      <div id="body">
+        <Switch>
+          <Route exact={true} path="/">
+            <div className="body__contents">
+              <Contents />
+              {/* <Comunity /> */}
+            </div>
+          </Route>
+
+          <Route exact={true} path="/login" component={LoginPage}>
+            <LoginPage />
+          </Route>
+
+          <Route exact={true} path="/join" component={JoinPage}>
+            <JoinPage />
+          </Route>
+        </Switch>
+      </div>
+
+      <div id="footer">
         <Footer />
-      </footer>
+      </div>
     </div>
   );
 }

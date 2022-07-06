@@ -26,6 +26,10 @@
   --animation-duration: 300ms;
 }
 
+* {
+  line-height: normal;
+}
+
 .body__contents {
   width: 1400px;
   margin: auto;
@@ -36,7 +40,15 @@ h1 {
   padding: 10px;
 }
 
-footer {
-  height: 200px;
-  background-color: var(--color-light-grey);
+#body {
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 200px;
+}
+
+#footer {
+  height: 300px;
+  background-color: var(--color-orange);
+  position: relative;
+  /* transform: translateY(-100%); */
 }

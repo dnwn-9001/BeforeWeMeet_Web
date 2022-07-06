@@ -9,6 +9,7 @@ import {
   InputNumber,
   Row,
   Select,
+  Radio,
 } from "antd";
 import React, { useState } from "react";
 import "./index.css";
@@ -140,6 +141,13 @@ const JoinPage = () => {
       scrollToFirstError
       size="large"
     >
+      <Form.Item label="Radio">
+        <Radio.Group>
+          <Radio value="expert"> 전문가 </Radio>
+          <Radio value="person"> 개인 </Radio>
+        </Radio.Group>
+      </Form.Item>
+
       <Form.Item
         name="email"
         label="E-mail"

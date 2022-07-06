@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Orbitron&family=PT+Sans:wght@400;700&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;700&display=swap");
+
 /* Global*/
 :root {
   /* Color */
@@ -44,6 +46,7 @@ h1 {
   height: auto;
   min-height: 100%;
   padding-bottom: 200px;
+  font-family: "Quicksand", sans-serif;
 }
 
 #footer {

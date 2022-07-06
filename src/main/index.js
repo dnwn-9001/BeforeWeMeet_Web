@@ -1,9 +1,92 @@
 import "../common/Common.css";
-import con_styles from "./Contents.module.css";
-import com_styles from "./Comunity.module.css";
-import axios from "axios";
-import React from "react";
-import { Link } from "react-router-dom";
+import "./index.css";
+// import axios from "axios";
+import React, { Component } from "react";
+import Slider from "react-slick";
+import { Button } from "antd";
+
+class MultipleItems extends Component {
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+    };
+    return (
+      // 전문가 타이틀
+      <div className="expert">
+        <div className="content__title">
+          <h1>Expert Profile</h1>
+        </div>
+        <div className="expert__profile">
+          <Slider {...settings}>
+            <div className="expert__profile__dtl">
+              <img
+                className="expert__profile__dtl__img"
+                src="images/kang.png"
+                alt="전문강사 이미지"
+              />
+              <h3>강형욱 / 동물훈련사</h3>
+              <Button>채팅하기</Button>
+            </div>
+
+            <div className="expert__profile__dtl">
+              <img
+                className="expert__profile__dtl__img"
+                src="images/kim.png"
+                alt="전문강사 이미지"
+              />
+              <h3>김명철 / 수의사, 고양이 행동 전문가</h3>
+              <Button>채팅하기</Button>
+            </div>
+
+            <div className="expert__profile__dtl">
+              <img
+                className="expert__profile__dtl__img"
+                src="images/jung.png"
+                alt="전문강사 이미지"
+              />
+              <h3>김정호 / 수의사</h3>
+              <Button>채팅하기</Button>
+            </div>
+
+            <div className="expert__profile__dtl">
+              <img
+                className="expert__profile__dtl__img"
+                src="images/kwon.png"
+                alt="전문강사 이미지"
+              />
+              <h3>권혁필 / 에듀펫 소장</h3>
+              <Button>채팅하기</Button>
+            </div>
+
+            <div className="expert__profile__dtl">
+              <img
+                className="expert__profile__dtl__img"
+                src="images/Lee.png"
+                alt="전문강사 이미지"
+              />
+              <h3>이찬종 / 동물훈련사</h3>
+              <Button>채팅하기</Button>
+            </div>
+
+            <div className="expert__profile__dtl">
+              <img
+                className="expert__profile__dtl__img"
+                src="images/Jun.png"
+                alt="전문강사 이미지"
+              />
+              <h3>이준규 / 반려견 훈련사</h3>
+              <Button>채팅하기</Button>
+            </div>
+          </Slider>
+        </div>
+      </div>
+    );
+  }
+}
 
 function Contents() {
   // 유튜브 정보 요청
@@ -29,33 +112,11 @@ function Contents() {
 
   return (
     <div>
-      {/* 전문가 프로필 영역 */}
-      <div className={con_styles.expert}>
-        <div className={con_styles.content__title}>
-          <h1>Expert Profile</h1>
-        </div>
-        <div className={con_styles.expert__profile}>
-          <button>
-            <h1>버튼</h1>
-          </button>
-          <div className={con_styles.expert__profile__dtl}>
-            <img
-              className={con_styles.expert__profile__dtl__img}
-              src=""
-              alt="전문강사 이미지"
-            />
-            <span>강사명 : 강형욱 / 강아지 행동훈련사</span>
-          </div>
-          <button>
-            <h1>버튼</h1>
-          </button>
-        </div>
-      </div>
       {/* 유튜브 영역 */}
-      <div className={con_styles.content}>
-        <div className={con_styles.content__title}>
+      <div className="content">
+        <div className="content__title">
           <h1>YouTube</h1>
-          <select name="content__option" id={con_styles.content__category}>
+          <select name="content__option" id="content__category">
             <option value="dog">강아지</option>
             <option value="cat">고양이</option>
             <option value="Hedgehog">고슴도치</option>
@@ -63,10 +124,10 @@ function Contents() {
           </select>
         </div>
 
-        <div className={con_styles.content__box}>
-          <div className={con_styles.content__box__dtl}>
+        <div className="content__box">
+          <div className="content__box__dtl">
             <img
-              className={con_styles.content__box__img}
+              className="content__box__img"
               src="images/thumbnail_youtube.png"
               alt="썸네일"
             />
@@ -78,50 +139,50 @@ function Contents() {
   );
 }
 
-function Comunity() {
-  return (
-    <div className="comunity">
-      <div className={com_styles.comunity__title}>
-        <h1>Comunity</h1>
-        <button className={com_styles.comunity__more}>more</button>
-      </div>
-      <div className={com_styles.comunity__board}>
-        <div className={com_styles.comunity__board__dtl}>
-          <img
-            className="comunity__board__dtl__img"
-            src="images/thumbnail_board.png"
-            alt="게시판 썸네일"
-          />
-          <div className={com_styles.comunity__board__dtl__box}>
-            <h3>게시판 제목 입니다.</h3>
-            <p>게시판 내용 미리보기 입니다.</p>
-          </div>
-        </div>
-        <div className={com_styles.comunity__board__dtl}>
-          <img
-            className="comunity__board__dtl__img"
-            src="images/thumbnail_board.png"
-            alt="게시판 썸네일"
-          />
-          <div className={com_styles.comunity__board__dtl__box}>
-            <h3>게시판 제목 입니다.</h3>
-            <p>게시판 내용 미리보기 입니다.</p>
-          </div>
-        </div>
-        <div className={com_styles.comunity__board__dtl}>
-          <img
-            className="comunity__board__dtl__img"
-            src="images/thumbnail_board.png"
-            alt="게시판 썸네일"
-          />
-          <div className={com_styles.comunity__board__dtl__box}>
-            <h3>게시판 제목 입니다.</h3>
-            <p>게시판 내용 미리보기 입니다.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+// function Comunity() {
+//   return (
+//     <div className="comunity">
+//       <div className={com_styles.comunity__title}>
+//         <h1>Comunity</h1>
+//         <button className={com_styles.comunity__more}>more</button>
+//       </div>
+//       <div className={com_styles.comunity__board}>
+//         <div className={com_styles.comunity__board__dtl}>
+//           <img
+//             className="comunity__board__dtl__img"
+//             src="images/thumbnail_board.png"
+//             alt="게시판 썸네일"
+//           />
+//           <div className={com_styles.comunity__board__dtl__box}>
+//             <h3>게시판 제목 입니다.</h3>
+//             <p>게시판 내용 미리보기 입니다.</p>
+//           </div>
+//         </div>
+//         <div className={com_styles.comunity__board__dtl}>
+//           <img
+//             className="comunity__board__dtl__img"
+//             src="images/thumbnail_board.png"
+//             alt="게시판 썸네일"
+//           />
+//           <div className={com_styles.comunity__board__dtl__box}>
+//             <h3>게시판 제목 입니다.</h3>
+//             <p>게시판 내용 미리보기 입니다.</p>
+//           </div>
+//         </div>
+//         <div className={com_styles.comunity__board__dtl}>
+//           <img
+//             className="comunity__board__dtl__img"
+//             src="images/thumbnail_board.png"
+//             alt="게시판 썸네일"
+//           />
+//           <div className={com_styles.comunity__board__dtl__box}>
+//             <h3>게시판 제목 입니다.</h3>
+//             <p>게시판 내용 미리보기 입니다.</p>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
-export { Contents, Comunity };
+export { Contents, MultipleItems };

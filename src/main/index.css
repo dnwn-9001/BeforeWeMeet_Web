@@ -1,0 +1,86 @@
+/* 전문가 프로필 */
+.expert {
+  margin-top: 50px;
+}
+
+.content__title {
+  margin-bottom: 30px;
+}
+
+.expert__profile {
+  display: flex;
+}
+
+.expert__profile__dtl__img {
+  margin: auto;
+  margin-top: 16px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.expert__profile__dtl h3 {
+  margin: 16px 0;
+  text-align: center;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bold;
+}
+
+.expert__profile__dtl button {
+  margin-left: 185px;
+  margin-bottom: 16px;
+}
+
+.expert__profile__dtl button:hover {
+  color: var(--color-orange);
+  border-color: var(--color-orange);
+}
+
+/* 유튜브 컨텐츠 */
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.content__title {
+  display: flex;
+}
+
+.content__title h1 {
+  height: 57px;
+}
+
+#content__category {
+  margin: 30px 30px;
+}
+
+.content__box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.content__box__img {
+  cursor: pointer;
+}
+
+/* .comunity__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comunity__more {
+  height: 50px;
+  cursor: pointer;
+}
+
+.comunity__board__dtl {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.comunity__board__dtl__box {
+  margin-left: 25px;
+} */

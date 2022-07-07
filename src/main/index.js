@@ -136,7 +136,7 @@ class MultipleItems extends Component {
         </div>
 
         {this.state.showPopup ? (
-          <Chat text="채팅창" closePopup={this.togglePopup.bind(this)} />
+          <Chat text="상담하기" closePopup={this.togglePopup.bind(this)} />
         ) : null}
       </div>
     );

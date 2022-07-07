@@ -91,3 +91,7 @@
   background-color: var(--color-orange);
   height: 50px;
 }
+
+.popup__inner__bottom__input {
+  background-color: var(--color-yellow);
+}

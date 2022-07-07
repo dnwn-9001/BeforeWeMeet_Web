@@ -4,15 +4,54 @@ import "./index.css";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Button } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+
+// slick-slider 화살표 디자인 변경
+const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        backgroundColor: "#ffe082",
+        border: "1px solid #ffe082",
+        borderRadius: "50%",
+      }}
+      onClick={onClick}
+    />
+  );
+};
+
+const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        backgroundColor: "#ffe082",
+        border: "1px solid #ffe082",
+        borderRadius: "50%",
+      }}
+      onClick={onClick}
+    />
+  );
+};
 
 class MultipleItems extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 3,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
     };
     return (
       // 전문가 타이틀

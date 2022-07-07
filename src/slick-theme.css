@@ -20,10 +20,8 @@
 
   cursor: pointer;
 
-  color: var(--color-yellow);
   border: none;
   outline: none;
-  background: navy;
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -92,7 +90,7 @@
 
 .slick-dots {
   position: absolute;
-  bottom: -25px;
+  bottom: -20px;
 
   display: block;
 

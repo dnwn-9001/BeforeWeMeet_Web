@@ -25,6 +25,8 @@
 
   margin: 0;
   padding: 0;
+
+  height: 280px;
 }
 .slick-list:focus {
   outline: none;
@@ -51,6 +53,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  height: 280px;
 }
 .slick-track:before,
 .slick-track:after {
@@ -68,6 +71,8 @@
 .slick-slide {
   display: none;
   float: left;
+
+  margin: 30px 0;
 
   height: 100%;
   min-height: 1px;
@@ -103,9 +108,10 @@
 
 /* 커스터마이징 */
 .slick-slide.slick-active {
-  margin: 0 10px;
-  /* background-color: var(--color-yellow); */
-  border-radius: 4%;
+  margin: 30px 10px 0 10px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
 }
 
 .slick-slider.slick-initialized {

@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import { Button } from "antd";
 import { Like } from "../mypage";
+import Chat from "../chat";
 
 // slick-slider 화살표 디자인 변경
 const NextArrow = (props) => {
@@ -41,6 +42,19 @@ const PrevArrow = (props) => {
 };
 
 class MultipleItems extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false,
+    };
+  }
+
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup,
+    });
+  }
+
   render() {
     const settings = {
       dots: false,
@@ -66,7 +80,7 @@ class MultipleItems extends Component {
                 alt="전문강사 이미지"
               />
               <h3>강형욱 / 동물훈련사</h3>
-              <Button>채팅하기</Button>
+              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
             </div>
 
             <div className="expert__profile__dtl">
@@ -76,7 +90,7 @@ class MultipleItems extends Component {
                 alt="전문강사 이미지"
               />
               <h3>김명철 / 수의사, 고양이 행동 전문가</h3>
-              <Button>채팅하기</Button>
+              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
             </div>
 
             <div className="expert__profile__dtl">
@@ -86,7 +100,7 @@ class MultipleItems extends Component {
                 alt="전문강사 이미지"
               />
               <h3>김정호 / 수의사</h3>
-              <Button>채팅하기</Button>
+              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
             </div>
 
             <div className="expert__profile__dtl">
@@ -96,7 +110,7 @@ class MultipleItems extends Component {
                 alt="전문강사 이미지"
               />
               <h3>권혁필 / 에듀펫 소장</h3>
-              <Button>채팅하기</Button>
+              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
             </div>
 
             <div className="expert__profile__dtl">
@@ -106,7 +120,7 @@ class MultipleItems extends Component {
                 alt="전문강사 이미지"
               />
               <h3>이찬종 / 동물훈련사</h3>
-              <Button>채팅하기</Button>
+              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
             </div>
 
             <div className="expert__profile__dtl">
@@ -116,10 +130,14 @@ class MultipleItems extends Component {
                 alt="전문강사 이미지"
               />
               <h3>이준규 / 반려견 훈련사</h3>
-              <Button>채팅하기</Button>
+              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
             </div>
           </Slider>
         </div>
+
+        {this.state.showPopup ? (
+          <Chat text="채팅창" closePopup={this.togglePopup.bind(this)} />
+        ) : null}
       </div>
     );
   }

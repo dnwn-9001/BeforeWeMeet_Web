@@ -1,4 +1,3 @@
-import "./Common.css";
 import styles from "./Logo.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser } from "@fortawesome/free-regular-svg-icons";

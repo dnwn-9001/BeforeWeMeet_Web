@@ -1,10 +1,11 @@
 import "antd/dist/antd.css";
-import "./common/Common.css";
+import "./App.css";
 import Logo from "./common/Logo";
 import Footer from "./common/Footer";
-import { Contents, MultipleItems } from "./main";
+import { Contents, MultipleItems, LikeContents } from "./main";
 import LoginPage from "./login";
 import JoinPage from "./join";
+import { Account, Like } from "./mypage";
 import { Switch, Route } from "react-router-dom";
 import "./slick.css";
 import "./slick-theme.css";
@@ -32,6 +33,15 @@ function App() {
           <Route exact={true} path="/join" component={JoinPage}>
             <JoinPage />
           </Route>
+
+          <div className="body__contents">
+            <Route exact={true} path="/information">
+              <Account title="My account" />
+              <Like>
+                <LikeContents />
+              </Like>
+            </Route>
+          </div>
         </Switch>
       </div>
 

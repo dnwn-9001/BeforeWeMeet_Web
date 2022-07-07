@@ -1,4 +1,3 @@
-import "./Common.css";
 import styles from "./Footer.module.css";
 
 function Footer() {

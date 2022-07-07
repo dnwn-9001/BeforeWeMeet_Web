@@ -1,11 +1,9 @@
-import "../common/Common.css";
 import "./index.css";
 // import axios from "axios";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Button } from "antd";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { Like } from "../mypage";
 
 // slick-slider 화살표 디자인 변경
 const NextArrow = (props) => {
@@ -178,50 +176,27 @@ function Contents() {
   );
 }
 
-// function Comunity() {
-//   return (
-//     <div className="comunity">
-//       <div className={com_styles.comunity__title}>
-//         <h1>Comunity</h1>
-//         <button className={com_styles.comunity__more}>more</button>
-//       </div>
-//       <div className={com_styles.comunity__board}>
-//         <div className={com_styles.comunity__board__dtl}>
-//           <img
-//             className="comunity__board__dtl__img"
-//             src="images/thumbnail_board.png"
-//             alt="게시판 썸네일"
-//           />
-//           <div className={com_styles.comunity__board__dtl__box}>
-//             <h3>게시판 제목 입니다.</h3>
-//             <p>게시판 내용 미리보기 입니다.</p>
-//           </div>
-//         </div>
-//         <div className={com_styles.comunity__board__dtl}>
-//           <img
-//             className="comunity__board__dtl__img"
-//             src="images/thumbnail_board.png"
-//             alt="게시판 썸네일"
-//           />
-//           <div className={com_styles.comunity__board__dtl__box}>
-//             <h3>게시판 제목 입니다.</h3>
-//             <p>게시판 내용 미리보기 입니다.</p>
-//           </div>
-//         </div>
-//         <div className={com_styles.comunity__board__dtl}>
-//           <img
-//             className="comunity__board__dtl__img"
-//             src="images/thumbnail_board.png"
-//             alt="게시판 썸네일"
-//           />
-//           <div className={com_styles.comunity__board__dtl__box}>
-//             <h3>게시판 제목 입니다.</h3>
-//             <p>게시판 내용 미리보기 입니다.</p>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+// mypage의 'Like'영역에 랜더링
+function LikeContents() {
+  return (
+    <Like title="Like">
+      <div className="content">
+        <div className="content__title">
+          <h1>Like</h1>
+        </div>
 
-export { Contents, MultipleItems };
+        <div className="content__box">
+          <div className="content__box__dtl">
+            <img
+              className="content__box__img"
+              src="images/thumbnail_youtube.png"
+              alt="썸네일"
+            />
+            <p className="content__box__title">title</p>
+          </div>
+        </div>
+      </div>
+    </Like>
+  );
+}
+export { Contents, MultipleItems, LikeContents };

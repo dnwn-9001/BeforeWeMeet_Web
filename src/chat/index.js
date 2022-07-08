@@ -8,27 +8,22 @@ import { Input, Button } from "antd";
 // 서버에 연결 요청
 const socket = io.connect("http://localhost:8082");
 
-//emit()으로 이벤트 내보내기
-// socket.emit("hello", "안녕하세요.", (response) => {
-//   console.log(response);
-// });
-
 function Chat(props) {
   const text = props.text;
   const close = props.closePopup;
 
   const [chatArr, setChatArr] = useState([]);
-  const [chat, setChat] = useState("");
+  let [chat, setChat] = useState("");
   let cnt = 0;
 
-  useEffect(() => {
-    return () => {
-      // 소켓 닫기
-      socket.close();
-    };
-  }, []);
+  // useEffect(() => {
+  //   return () => {
+  //     // 소켓 닫기
+  //     socket.close();
+  //   };
+  // }, []);
 
-  // 서버측에서 발생한 receive message 이벤트에 대한 콜백을 등록해줌
+  //receive message 이벤트에 대한 콜백을 등록해줌
   useEffect(() => {
     socket.on("receive message", (message) => {
       cnt++;
@@ -39,7 +34,13 @@ function Chat(props) {
   //버튼을 클릭시 send message이벤트 발생 -> 서버측에서 socket.on으로 받음.
   const buttonHandler = useCallback(() => {
     socket.emit("send message", chat);
+    setChat("");
   }, [chat]);
+
+  // const buttonHandler = () => {
+  //   socket.emit("send message", chat);
+  //   setChat("");
+  // };
 
   // useCallback(함수, 배열): 첫번째 인자로 넘어온 함수를, 두번째 인자로 넘어온 배열 내의 값이 변경될 때까지 저장해놓고 재사용할 수 있게 해줌.
   const changeMessage = useCallback(
@@ -48,6 +49,10 @@ function Chat(props) {
     },
     [chat]
   );
+
+  // const changeMessage = (e) => {
+  //   setChat(e.target.value);
+  // };
 
   return (
     <div className="popup">
@@ -79,6 +84,10 @@ function Chat(props) {
             <Input
               placeholder="메세지를 작성해주세요."
               onChange={changeMessage}
+              onKeyPress={(event) =>
+                event.key === "Enter" ? buttonHandler() : null
+              }
+              value={chat}
             />
           </div>
           <div className="popup__inner__bottom__send">

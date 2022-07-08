@@ -1,6 +1,6 @@
 import "./index.css";
-// import axios from "axios";
-import React, { Component } from "react";
+import axios from "axios";
+import React, { Component, useState, useEffect } from "react";
 import Slider from "react-slick";
 import { Button } from "antd";
 import { Like } from "../mypage";
@@ -145,25 +145,18 @@ class MultipleItems extends Component {
 
 function Contents() {
   // 유튜브 정보 요청
-  // const [data, setData] = React.useState([]);
-  // React.useEffect(() => {
-  //   axios
-  //     .get("http://localhost:8081/youtube")
-  //     .then((result) => {
-  //       const data = result.data;
-  //       // let titles = data["titleList"];
-  //       // let urls = data["urlList"];
-  //       // let imgs = data["imgList"];
-  //       console.log(data);
-  //       // data["titleList"].forEach((list) => {
-  //       //   console.log("list : " + list);
-  //       // });
-  //       setData(data);
-  //     })
-  //     .catch((error) => {
-  //       console.log("요청이 실패했습니다.");
-  //     });
-  // }, []);
+  const [youtubeData, setYoutubeData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:8081/youtube")
+      .then((result) => {
+        const youtube = result.data;
+        setYoutubeData(youtube);
+      })
+      .catch((error) => {
+        console.log("요청이 실패했습니다.");
+      });
+  }, []);
 
   return (
     <div>
@@ -174,19 +167,28 @@ function Contents() {
           <select name="content__option" id="content__category">
             <option value="dog">강아지</option>
             <option value="cat">고양이</option>
-            <option value="Hedgehog">고슴도치</option>
+            <option value="hedgehog">고슴도치</option>
             <option value="meerkat">미어캣</option>
+            <option value="hamster">햄스터</option>
+            <option value="rabbit">토끼</option>
           </select>
         </div>
 
         <div className="content__box">
           <div className="content__box__dtl">
-            <img
-              className="content__box__img"
-              src="images/thumbnail_youtube.png"
-              alt="썸네일"
-            />
-            <p className="content__box__title">title</p>
+            <div className="content__box__dtl__div">
+              {/* {youtubeData &&
+                youtubeData["imgList"].map((img) => {
+                  return (
+                    <img
+                      className="content__box__dtl__div__img"
+                      src={img.url}
+                      alt="썸네일"
+                      key={img.url}
+                    />
+                  );
+                })} */}
+            </div>
           </div>
         </div>
       </div>

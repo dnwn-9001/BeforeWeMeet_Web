@@ -61,6 +61,21 @@
   margin-bottom: 80px;
 }
 
-.content__box__img {
+.content__box__dtl {
+  margin-bottom: 30px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.content__box__dtl__div {
+  display: flex;
+  margin: 0 16px;
+}
+
+.content__box__dtl__div__img {
   cursor: pointer;
+  width: 300px;
+  height: 200px;
 }

@@ -13,16 +13,13 @@ const socket = io.connect("http://localhost:8082");
 //   console.log(response);
 // });
 
-// socket.emit("send message", "궁금한게 있습니다.", (response) => {
-//   console.log(response);
-// });
-
 function Chat(props) {
   const text = props.text;
   const close = props.closePopup;
 
   const [chatArr, setChatArr] = useState([]);
   const [chat, setChat] = useState("");
+  let cnt = 0;
 
   useEffect(() => {
     return () => {
@@ -31,26 +28,20 @@ function Chat(props) {
     };
   }, []);
 
-  // 서버측에서 발생한 receive message 이벤트를 처리한다. (message를 받아 chatArr에 넣는다.)
+  // 서버측에서 발생한 receive message 이벤트에 대한 콜백을 등록해줌
   useEffect(() => {
     socket.on("receive message", (message) => {
-      console.log("receive : " + message);
-      setChatArr((message) => {
-        chatArr.concat(message);
-        console.log("chatArr : " + chatArr);
-      });
+      cnt++;
+      setChatArr((chatArr) => chatArr.concat(message));
     });
-  });
+  }, []);
 
   //버튼을 클릭시 send message이벤트 발생 -> 서버측에서 socket.on으로 받음.
   const buttonHandler = useCallback(() => {
-    console.log("클릭");
-    console.log(chat);
     socket.emit("send message", chat);
   }, [chat]);
 
   // useCallback(함수, 배열): 첫번째 인자로 넘어온 함수를, 두번째 인자로 넘어온 배열 내의 값이 변경될 때까지 저장해놓고 재사용할 수 있게 해줌.
-  //
   const changeMessage = useCallback(
     (e) => {
       setChat(e.target.value);
@@ -71,11 +62,16 @@ function Chat(props) {
         </div>
         <div className="popup__inner__message">
           <div className="popup__inner__message__box">
-            {chatArr.map((ele) => (
-              <div className="popup__inner__message__box__log">
-                {ele.message}
-              </div>
-            ))}
+            {/* cnt를 1씩 증가시켜서 같은 메세지 내용이어도 key값을 고유하게 해줌. */}
+            {chatArr &&
+              chatArr.map((ele, cnt) => (
+                <div
+                  key={ele.concat(cnt)}
+                  className="popup__inner__message__box__log"
+                >
+                  <p>{ele}</p>
+                </div>
+              ))}
           </div>
         </div>
         <div className="popup__inner__bottom">

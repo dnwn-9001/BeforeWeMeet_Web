@@ -2,7 +2,7 @@ import "./index.css";
 import axios from "axios";
 import React, { Component, useState, useEffect } from "react";
 import Slider from "react-slick";
-import { Button } from "antd";
+import { Button, Select } from "antd";
 import { Like } from "../mypage";
 import Chat from "../chat";
 
@@ -144,19 +144,48 @@ class MultipleItems extends Component {
 }
 
 function Contents() {
-  // 유튜브 정보 요청
+  const options = [
+    { value: "dog", text: "강아지" },
+    { value: "cat", text: "고양이" },
+    { value: "hedgehog", text: "고슴도치" },
+    { value: "meerkat", text: "미어캣" },
+    { value: "hamster", text: "햄스터" },
+    { value: "rabbit", text: "토끼" },
+  ];
+
   const [youtubeData, setYoutubeData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState();
+  const [selected, setSelected] = useState(options[0].value);
+  // const { Option } = Select;
+
   useEffect(() => {
     axios
-      .get("http://localhost:8081/youtube")
+      .get("http://localhost:8081/youtube", { params: { key: selected } })
       .then((result) => {
         const youtube = result.data;
         setYoutubeData(youtube);
       })
       .catch((error) => {
         console.log("요청이 실패했습니다.");
+        setError(error);
+      })
+      .finally(() => {
+        setLoading(false);
       });
-  }, []);
+  }, [selected]);
+
+  if (loading) {
+    return <p>Data is loading...</p>;
+  }
+
+  if (error || !Array.isArray(youtubeData["imgList"])) {
+    return <p id="error__message">There was an error loading your data!</p>;
+  }
+
+  const handleChange = (event) => {
+    setSelected(event.target.value);
+  };
 
   return (
     <div>
@@ -164,30 +193,47 @@ function Contents() {
       <div className="content">
         <div className="content__title">
           <h1>YouTube</h1>
-          <select name="content__option" id="content__category">
-            <option value="dog">강아지</option>
-            <option value="cat">고양이</option>
-            <option value="hedgehog">고슴도치</option>
-            <option value="meerkat">미어캣</option>
-            <option value="hamster">햄스터</option>
-            <option value="rabbit">토끼</option>
+          <select
+            name="content__option"
+            id="content__category"
+            style={{
+              width: 120,
+            }}
+            value={selected}
+            onChange={handleChange}
+          >
+            {options &&
+              options.map((option) => {
+                return (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                );
+              })}
           </select>
         </div>
 
         <div className="content__box">
           <div className="content__box__dtl">
             <div className="content__box__dtl__div">
-              {/* {youtubeData &&
+              {youtubeData["imgList"] &&
                 youtubeData["imgList"].map((img) => {
+                  const id = img.url.substring(23, 34);
                   return (
-                    <img
-                      className="content__box__dtl__div__img"
-                      src={img.url}
-                      alt="썸네일"
-                      key={img.url}
-                    />
+                    <a
+                      href={`https://www.youtube.com/watch?v=${id}`}
+                      target="_blank"
+                      key={id}
+                    >
+                      <img
+                        className="content__box__dtl__div__img"
+                        src={img.url}
+                        alt="썸네일"
+                        key={img.url}
+                      />
+                    </a>
                   );
-                })} */}
+                })}
             </div>
           </div>
         </div>

@@ -44,14 +44,15 @@
 
 .content__title {
   display: flex;
+  align-items: center;
 }
 
 .content__title h1 {
   height: 57px;
 }
 
-#content__category {
-  margin: 30px 30px;
+.ant-select.ant-select-single.ant-select-show-arrow {
+  margin: 0 30px;
 }
 
 .content__box {
@@ -78,4 +79,9 @@
   cursor: pointer;
   width: 300px;
   height: 200px;
+  padding: 0 16px;
+}
+
+#error__message {
+  margin: 200px 0;
 }

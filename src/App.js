@@ -19,29 +19,31 @@ function App() {
 
       <div id="body">
         <Switch>
-          <Route exact={true} path="/">
-            <div className="body__contents">
-              <MultipleItems />
-              <Contents />
-            </div>
-          </Route>
-
-          <Route exact={true} path="/login" component={LoginPage}>
-            <LoginPage />
-          </Route>
-
-          <Route exact={true} path="/join" component={JoinPage}>
-            <JoinPage />
-          </Route>
-
-          <div className="body__contents">
-            <Route exact={true} path="/information">
-              <Account title="My account" />
-              <Like>
-                <LikeContents />
-              </Like>
+          <>
+            <Route exact={true} path="/">
+              <div className="body__contents">
+                <MultipleItems />
+                <Contents />
+              </div>
             </Route>
-          </div>
+
+            <Route exact={true} path="/login" component={LoginPage}>
+              <LoginPage />
+            </Route>
+
+            <Route exact={true} path="/join" component={JoinPage}>
+              <JoinPage />
+            </Route>
+
+            <div className="body__contents">
+              <Route exact={true} path="/information">
+                <Account title="My account" />
+                <Like>
+                  <LikeContents />
+                </Like>
+              </Route>
+            </div>
+          </>
         </Switch>
       </div>
 

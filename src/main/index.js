@@ -145,12 +145,12 @@ class MultipleItems extends Component {
 
 function Contents() {
   const options = [
-    { value: "dog", text: "강아지" },
-    { value: "cat", text: "고양이" },
-    { value: "hedgehog", text: "고슴도치" },
-    { value: "meerkat", text: "미어캣" },
-    { value: "hamster", text: "햄스터" },
-    { value: "rabbit", text: "토끼" },
+    { value: "강아지 준비물", text: "강아지" },
+    { value: "고양이 준비물", text: "고양이" },
+    { value: "고슴도치 준비물", text: "고슴도치" },
+    { value: "미어캣 준비물", text: "미어캣" },
+    { value: "햄스터 준비물", text: "햄스터" },
+    { value: "토끼 준비물", text: "토끼" },
   ];
 
   const [youtubeData, setYoutubeData] = useState([]);
@@ -161,7 +161,7 @@ function Contents() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/youtube", { params: { key: selected } })
+      .get("http://localhost:8081/", { params: { key: selected } })
       .then((result) => {
         const youtube = result.data;
         setYoutubeData(youtube);

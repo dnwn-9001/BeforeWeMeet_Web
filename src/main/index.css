@@ -23,19 +23,26 @@
   transform: scale(1.1);
 }
 
-.expert__profile__dtl h3 {
+.expert__profile__dtl__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expert__profile__dtl__info h3 {
   margin: 16px 0;
   text-align: center;
   font-family: "Nanum Gothic", sans-serif;
   font-weight: bold;
 }
 
-.expert__profile__dtl button {
-  margin-left: 185px;
-  margin-bottom: 16px;
+.ant-btn.ant-btn-default {
+  margin: auto;
+  cursor: pointer;
+  z-index: 3;
 }
 
-.expert__profile__dtl button:hover {
+.ant-btn.ant-btn-default:hover {
   color: var(--color-orange);
   border-color: var(--color-orange);
 }
@@ -98,4 +105,33 @@
   padding: 0 7px;
   font-family: "Nanum Gothic", sans-serif;
   cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .expert {
+    margin-left: 150px;
+    text-align: center;
+  }
+
+  .content__title {
+    margin-left: 25px;
+  }
+
+  .content {
+    margin-left: 110px;
+    text-align: center;
+  }
+
+  .content__box {
+    width: 330px;
+  }
+
+  .content__box__dtl__div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content__box__dtl__div__img {
+    margin: 10px;
+  }
 }

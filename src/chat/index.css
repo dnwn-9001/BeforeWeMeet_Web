@@ -69,7 +69,6 @@
   right: 0;
   top: 90%;
   bottom: 0%;
-  /* background-color: blueviolet; */
 
   display: flex;
   align-items: center;
@@ -88,6 +87,7 @@
 
 .popup__inner__bottom__send button {
   margin-bottom: 16px;
+  margin-right: 16px;
   background-color: var(--color-orange);
   height: 50px;
 }
@@ -111,4 +111,24 @@
 
 .popup__inner__message__box__log p {
   margin: 16px 12px;
+}
+
+@media screen and (max-width: 1200px) {
+  .popup {
+    z-index: 5;
+  }
+
+  .popup__inner,
+  .popup__inner__message,
+  .popup__inner__message__box {
+    width: 350px;
+  }
+
+  .popup__inner__message__box__log {
+    margin-left: 170px;
+  }
+
+  .popup__inner__message__box__log p {
+    text-align: left;
+  }
 }

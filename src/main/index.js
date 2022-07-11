@@ -73,11 +73,23 @@ class MultipleItems extends Component {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToShow: 4,
+      slidesToScroll: 2,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
       autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 750,
+          settings: "unslick",
+        },
+      ],
     };
     return (
       // 전문가 영역
@@ -97,12 +109,14 @@ class MultipleItems extends Component {
                       alt="전문강사 이미지"
                       key={expert.imgUrl}
                     />
-                    <h3 key={expert.name}>
-                      {expert.name} / {expert.job}
-                    </h3>
-                    <Button onClick={this.togglePopup.bind(this)}>
-                      채팅하기
-                    </Button>
+                    <div className="expert__profile__dtl__info">
+                      <h3 key={expert.name}>
+                        {expert.name} / {expert.job}
+                      </h3>
+                      <Button onClick={this.togglePopup.bind(this)}>
+                        상담하기
+                      </Button>
+                    </div>
                   </div>
                 );
               })}
@@ -134,7 +148,7 @@ function Contents() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/youtube", { params: { key: selected } })
+      .get("http://localhost:8081/", { params: { key: selected } })
       .then((result) => {
         const youtube = result.data;
         setYoutubeData(youtube);

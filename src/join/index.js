@@ -1,21 +1,7 @@
-import {
-  AutoComplete,
-  Button,
-  Cascader,
-  Checkbox,
-  Col,
-  Form,
-  Input,
-  InputNumber,
-  Row,
-  Select,
-  Radio,
-} from "antd";
+import { Button, Form, Input, Radio } from "antd";
 import axios from "axios";
 import React, { useState } from "react";
 import "./index.css";
-
-const { Option } = Select;
 
 const formItemLayout = {
   labelCol: {

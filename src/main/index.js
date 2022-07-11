@@ -5,8 +5,6 @@ import Slider from "react-slick";
 import { Button } from "antd";
 import { Like } from "../mypage";
 import Chat from "../chat";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 // slick-slider 화살표 디자인 변경
 const NextArrow = (props) => {
@@ -22,7 +20,7 @@ const NextArrow = (props) => {
         borderRadius: "50%",
       }}
       onClick={onClick}
-    ></div>
+    />
   );
 };
 
@@ -39,19 +37,16 @@ const PrevArrow = (props) => {
         borderRadius: "50%",
       }}
       onClick={onClick}
-    >
-      <div>
-        <FontAwesomeIcon icon={faCircleChevronLeft} />
-      </div>
-    </div>
+    />
   );
 };
 
 class MultipleItems extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       showPopup: false,
+      experts: [],
     };
   }
 
@@ -59,6 +54,18 @@ class MultipleItems extends Component {
     this.setState({
       showPopup: !this.state.showPopup,
     });
+  }
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:8081/experts")
+      .then((res) => {
+        const result = res.data.experts;
+        this.setState({ experts: result });
+      })
+      .catch((err) => {
+        console.log("전문가 데이터 요청이 실패했습니다.");
+      });
   }
 
   render() {
@@ -73,72 +80,32 @@ class MultipleItems extends Component {
       autoplay: true,
     };
     return (
-      // 전문가 타이틀
+      // 전문가 영역
       <div className="expert">
         <div className="content__title">
           <h1>Expert Profile</h1>
         </div>
         <div className="expert__profile">
           <Slider {...settings}>
-            <div className="expert__profile__dtl">
-              <img
-                className="expert__profile__dtl__img"
-                src="images/kang.png"
-                alt="전문강사 이미지"
-              />
-              <h3>강형욱 / 동물훈련사</h3>
-              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
-            </div>
-
-            <div className="expert__profile__dtl">
-              <img
-                className="expert__profile__dtl__img"
-                src="images/kim.png"
-                alt="전문강사 이미지"
-              />
-              <h3>김명철 / 수의사, 고양이 행동 전문가</h3>
-              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
-            </div>
-
-            <div className="expert__profile__dtl">
-              <img
-                className="expert__profile__dtl__img"
-                src="images/jung.png"
-                alt="전문강사 이미지"
-              />
-              <h3>김정호 / 수의사</h3>
-              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
-            </div>
-
-            <div className="expert__profile__dtl">
-              <img
-                className="expert__profile__dtl__img"
-                src="images/kwon.png"
-                alt="전문강사 이미지"
-              />
-              <h3>권혁필 / 에듀펫 소장</h3>
-              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
-            </div>
-
-            <div className="expert__profile__dtl">
-              <img
-                className="expert__profile__dtl__img"
-                src="images/Lee.png"
-                alt="전문강사 이미지"
-              />
-              <h3>이찬종 / 동물훈련사</h3>
-              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
-            </div>
-
-            <div className="expert__profile__dtl">
-              <img
-                className="expert__profile__dtl__img"
-                src="images/Jun.png"
-                alt="전문강사 이미지"
-              />
-              <h3>이준규 / 반려견 훈련사</h3>
-              <Button onClick={this.togglePopup.bind(this)}>채팅하기</Button>
-            </div>
+            {this.state.experts &&
+              this.state.experts.map((expert) => {
+                return (
+                  <div className="expert__profile__dtl" key={expert.job}>
+                    <img
+                      className="expert__profile__dtl__img"
+                      src={expert.imgUrl}
+                      alt="전문강사 이미지"
+                      key={expert.imgUrl}
+                    />
+                    <h3 key={expert.name}>
+                      {expert.name} / {expert.job}
+                    </h3>
+                    <Button onClick={this.togglePopup.bind(this)}>
+                      채팅하기
+                    </Button>
+                  </div>
+                );
+              })}
           </Slider>
         </div>
 
@@ -164,7 +131,6 @@ function Contents() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
   const [selected, setSelected] = useState(options[0].value);
-  // const { Option } = Select;
 
   useEffect(() => {
     axios
@@ -174,7 +140,7 @@ function Contents() {
         setYoutubeData(youtube);
       })
       .catch((error) => {
-        console.log("요청이 실패했습니다.");
+        console.log("유튜브 데이터 요청이 실패했습니다.");
         setError(error);
       })
       .finally(() => {

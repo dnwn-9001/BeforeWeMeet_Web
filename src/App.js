@@ -1,5 +1,5 @@
-import "antd/dist/antd.css";
 import "./App.css";
+import "antd/dist/antd.css";
 import Logo from "./common/Logo";
 import Footer from "./common/Footer";
 import { Contents, MultipleItems, LikeContents } from "./main";
@@ -27,11 +27,11 @@ function App() {
               </div>
             </Route>
 
-            <Route exact={true} path="/login" component={LoginPage}>
+            <Route exact={true} path="/login">
               <LoginPage />
             </Route>
 
-            <Route exact={true} path="/join" component={JoinPage}>
+            <Route exact={true} path="/join">
               <JoinPage />
             </Route>
 

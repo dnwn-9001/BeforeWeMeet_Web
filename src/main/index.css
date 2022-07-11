@@ -16,6 +16,11 @@
   margin-top: 16px;
   border: 1px solid transparent;
   border-radius: 50%;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.expert__profile__dtl__img:hover {
+  transform: scale(1.1);
 }
 
 .expert__profile__dtl h3 {
@@ -84,4 +89,12 @@
 
 #error__message {
   margin: 200px 0;
+}
+
+#content__category {
+  margin-left: 30px;
+  border: 1px solid black;
+  height: 35px;
+  padding: 0 7px;
+  font-family: "Nanum Gothic", sans-serif;
 }

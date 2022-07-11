@@ -11,6 +11,7 @@ import {
   Select,
   Radio,
 } from "antd";
+import axios from "axios";
 import React, { useState } from "react";
 import "./index.css";
 
@@ -49,9 +50,23 @@ const tailFormItemLayout = {
 
 const JoinPage = () => {
   const [form] = Form.useForm();
+  const [error, setError] = useState("");
 
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
+    axios
+      .post("http://localhost:8081/join", values)
+      .then((result) => {
+        alert("회원가입이 완료되었습니다.");
+      })
+      .catch((error) => {
+        alert("회원가입에 실패하였습니다.");
+        setError(error);
+      });
+
+    if (error) {
+      return <p id="error__message">There was an error loading your data!</p>;
+    }
   };
 
   const [autoCompleteResult, setAutoCompleteResult] = useState([]);
@@ -81,7 +96,7 @@ const JoinPage = () => {
     >
       <Form.Item
         name="radio-button"
-        label="Radio.Button"
+        label="Status"
         rules={[{ required: true, message: "Please pick an item!" }]}
       >
         <Radio.Group>

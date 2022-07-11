@@ -35,9 +35,8 @@ function Account(props) {
         account.map((acc) => {
           return (
             <div className="account">
-              <h2 key={acc.MEMBER_EMAIL}>ID : {acc.MEMBER_EMAIL}</h2>
+              <h2 key={acc.MEMBER_ID}>ID : {acc.MEMBER_ID}</h2>
               <h2 key={acc.NICKNAME}>Nickname : {acc.NICKNAME}</h2>
-              <h2 key={acc.PHONE}>H.P : {acc.PHONE}</h2>
             </div>
           );
         })}

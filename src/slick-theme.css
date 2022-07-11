@@ -11,8 +11,8 @@
 
   display: block;
 
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -56,31 +56,33 @@
 }
 
 .slick-prev {
-  left: -25px;
+  left: -40px;
 }
 [dir="rtl"] .slick-prev {
   right: -25px;
   left: auto;
 }
 .slick-prev:before {
-  content: "←";
+  content: "◀";
+  margin-left: 2px;
 }
 [dir="rtl"] .slick-prev:before {
-  content: "→";
+  content: "▶";
 }
 
 .slick-next {
-  right: -25px;
+  right: -40px;
 }
 [dir="rtl"] .slick-next {
   right: auto;
   left: -25px;
 }
 .slick-next:before {
-  content: "→";
+  content: "▶";
+  margin-left: 6px;
 }
 [dir="rtl"] .slick-next:before {
-  content: "←";
+  content: "◀";
 }
 
 /* Dots */
@@ -163,4 +165,16 @@
 .slick-dots li.slick-active button:before {
   opacity: 0.75;
   color: black;
+}
+
+#body
+  > div:nth-child(1)
+  > div.expert
+  > div.expert__profile
+  > div
+  > div.slick-arrow.slick-prev
+  > div
+  > svg
+  > path {
+  display: none;
 }

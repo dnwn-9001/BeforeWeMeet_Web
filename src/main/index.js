@@ -2,9 +2,11 @@ import "./index.css";
 import axios from "axios";
 import React, { Component, useState, useEffect } from "react";
 import Slider from "react-slick";
-import { Button, Select } from "antd";
+import { Button } from "antd";
 import { Like } from "../mypage";
 import Chat from "../chat";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 // slick-slider 화살표 디자인 변경
 const NextArrow = (props) => {
@@ -20,7 +22,7 @@ const NextArrow = (props) => {
         borderRadius: "50%",
       }}
       onClick={onClick}
-    />
+    ></div>
   );
 };
 
@@ -37,7 +39,11 @@ const PrevArrow = (props) => {
         borderRadius: "50%",
       }}
       onClick={onClick}
-    />
+    >
+      <div>
+        <FontAwesomeIcon icon={faCircleChevronLeft} />
+      </div>
+    </div>
   );
 };
 
@@ -64,6 +70,7 @@ class MultipleItems extends Component {
       slidesToScroll: 3,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
+      autoplay: true,
     };
     return (
       // 전문가 타이틀
@@ -161,7 +168,7 @@ function Contents() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/", { params: { key: selected } })
+      .get("http://localhost:8081/youtube", { params: { key: selected } })
       .then((result) => {
         const youtube = result.data;
         setYoutubeData(youtube);

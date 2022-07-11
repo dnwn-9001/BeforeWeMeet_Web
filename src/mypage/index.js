@@ -1,6 +1,7 @@
 import "./index.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "../config/constants";
 
 function Account(props) {
   const [account, setAccount] = useState([]);
@@ -9,7 +10,7 @@ function Account(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/account")
+      .get(API_URL + "/account")
       .then((result) => {
         const myAccount = result.data;
         console.log(myAccount[0].PHONE);

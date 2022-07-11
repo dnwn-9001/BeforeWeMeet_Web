@@ -4,9 +4,10 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Input, Button } from "antd";
+import { API_URL } from "../config/constants";
 
 // 서버에 연결 요청
-const socket = io.connect("http://localhost:8082");
+const socket = io.connect(API_URL);
 
 function Chat(props) {
   const text = props.text;
@@ -37,11 +38,6 @@ function Chat(props) {
     setChat("");
   }, [chat]);
 
-  // const buttonHandler = () => {
-  //   socket.emit("send message", chat);
-  //   setChat("");
-  // };
-
   // useCallback(함수, 배열): 첫번째 인자로 넘어온 함수를, 두번째 인자로 넘어온 배열 내의 값이 변경될 때까지 저장해놓고 재사용할 수 있게 해줌.
   const changeMessage = useCallback(
     (e) => {
@@ -49,10 +45,6 @@ function Chat(props) {
     },
     [chat]
   );
-
-  // const changeMessage = (e) => {
-  //   setChat(e.target.value);
-  // };
 
   return (
     <div className="popup">

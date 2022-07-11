@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { Button } from "antd";
 import { Like } from "../mypage";
 import Chat from "../chat";
+import { API_URL } from "../config/constants";
 
 // slick-slider 화살표 디자인 변경
 const NextArrow = (props) => {
@@ -58,7 +59,7 @@ class MultipleItems extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8081/experts")
+      .get(API_URL + "/experts")
       .then((res) => {
         const result = res.data.experts;
         this.setState({ experts: result });
@@ -148,7 +149,9 @@ function Contents() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/youtube", { params: { key: selected } })
+      .get(API_URL + "/youtube", {
+        params: { key: selected },
+      })
       .then((result) => {
         const youtube = result.data;
         setYoutubeData(youtube);

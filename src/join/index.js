@@ -2,6 +2,7 @@ import { Button, Form, Input, Radio } from "antd";
 import axios from "axios";
 import React, { useState } from "react";
 import "./index.css";
+import { API_URL } from "../config/constants";
 
 const formItemLayout = {
   labelCol: {
@@ -41,7 +42,7 @@ const JoinPage = () => {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
     axios
-      .post("http://localhost:8081/join", values)
+      .post(API_URL + "/join", values)
       .then((result) => {
         alert("회원가입이 완료되었습니다.");
       })

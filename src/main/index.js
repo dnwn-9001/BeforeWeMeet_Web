@@ -148,7 +148,7 @@ function Contents() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/", { params: { key: selected } })
+      .get("http://localhost:8081/youtube", { params: { key: selected } })
       .then((result) => {
         const youtube = result.data;
         setYoutubeData(youtube);

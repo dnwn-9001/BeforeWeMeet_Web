@@ -35,8 +35,14 @@
   align-items: center;
 }
 
+/* 모바일 세로 */
 @media (min-width: 320px) and (max-width: 480px) {
   .footer {
     width: 300px;
+  }
+
+  .footer__dtl span {
+    margin: 0 7px;
+    font-size: var(--font-micro);
   }
 }

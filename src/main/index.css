@@ -136,14 +136,15 @@
   }
 }
 
+/* 모바일 세로 */
 @media (min-width: 320px) and (max-width: 480px) {
   .expert {
-    margin-left: 30px;
+    margin-left: 35px;
     text-align: center;
   }
 
   .content__title {
-    margin-left: 5px;
+    margin-left: 15px;
   }
 
   .content {

@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+![header](https://capsule-render.vercel.app/api?type=waving&color=ffecb3&height=250&section=header&text=Before%20We%20Meet&fontSize=50&animation=fadeIn&fontAlignY=50&desc=Joan%20&descAlignY=62&descAlign=62&)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+ 
+![화면 캡처 2022-07-12 172022](https://user-images.githubusercontent.com/106906742/178501426-abc47540-4c24-4a9b-82eb-f38e756508de.jpg)
 
-## Available Scripts
+### :zap: Demo :zap:
+https://before-we-meet-ge78uq4i9-dnwn-9001.vercel.app/
 
-In the project directory, you can run:
 
-### `npm start`
+### :information_desk_person: 웹 페이지 설명
+반려동물을 키우기 전 반려동물에 대해 공부하고 지식을 쌓을 수 있도록 전문가와 소통하고, </br>
+반려동물 관련 유튜브 콘텐츠를 모아 볼 수 있는 웹 사이트 입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### :speaker: 개발 목표 :speaker:
+React와 Node.js를 이용한 개인 프로젝트 진행으로 React,Node.js의 숙련도를 향상시키고,</br>
+youtube api와 axios,antd,react-slider,React-router-dom 라이브러리의 활용법을 숙지하고자 했습니다.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### :page_with_curl: 사용 기술 및 개발 환경 :page_with_curl:
 
-### `npm run build`
+<img src="https://img.shields.io/badge/-React-black?style=flat-square&logo=React&logoColor=#61DAFB"/> <img src="https://img.shields.io/badge/-Node.js-yellow?style=flat-square&logo=Node.js&logoColor=black"/> <img src="https://img.shields.io/badge/-Nodemon-F7DF1E?style=flat-square&logo=Nodemon&logoColor=#76D04B"/> <img src="https://img.shields.io/badge/-Express-blue?style=flat-square&logo=Express&logoColor=#000000"/> </br> <img src="https://img.shields.io/badge/-JavaScript-white?style=flat-square&logo=JavaScript&logoColor=#F7DF1E"/> <img src="https://img.shields.io/badge/-HTML5-beige?style=flat-square&logo=HTML5&logoColor=#E34F26"/> <img src="https://img.shields.io/badge/-CSS3-grey?style=flat-square&logo=CSS3&logoColor=#1572B6"/> <img src="https://img.shields.io/badge/-GitHub-pink?style=flat-square&logo=GitHub&logoColor=#181717"/> </br> <img src="https://img.shields.io/badge/-Visual Studio-orange?style=flat-square&logo=Visual Studio&logoColor=#5C2D91"/> 
+<img src="https://img.shields.io/badge/-Heroku-navy?style=flat-square&logo=Heroku&logoColor=#430098"/> <img src="https://img.shields.io/badge/-Vercel-purple?style=flat-square&logo=Vercel&logoColor=#000000"/> <img src="https://img.shields.io/badge/-Socket.io-red?style=flat-square&logo=Socket.io&logoColor=#010101"/> 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### :heavy_check_mark: Advanced Feature :heavy_check_mark:
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### :hammer: 개선사항(~ing) :hammer:
+1.회원가입(일반,전문가), 로그인 기능을 만들어 일반 회원이 전문가와 상담할 수 있도록 구현.</br>
+2.회원들은 원하는 유튜브 컨텐츠를 찜하여 '내 정보' 페이지에서 조회할 수 있도록 구현.
+</div>

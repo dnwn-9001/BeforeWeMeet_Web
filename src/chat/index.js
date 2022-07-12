@@ -4,10 +4,10 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Input, Button } from "antd";
-import { API_URL } from "../config/constants";
+import { SOCKET_URL } from "../config/constants";
 
 // 서버에 연결 요청
-const socket = io.connect(API_URL);
+const socket = io.connect(SOCKET_URL);
 
 function Chat(props) {
   const text = props.text;

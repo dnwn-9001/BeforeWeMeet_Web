@@ -142,8 +142,9 @@
 /* 모바일 세로 */
 @media (min-width: 320px) and (max-width: 480px) {
   .popup__inner {
-    left: 3%;
+    left: 5%;
     top: 10%;
     bottom: 65%;
+    right: 80%;
   }
 }

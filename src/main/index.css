@@ -139,12 +139,12 @@
 /* 모바일 세로 */
 @media (min-width: 320px) and (max-width: 480px) {
   .expert {
-    margin-left: 35px;
+    margin-left: 45px;
     text-align: center;
   }
 
   .content__title {
-    margin-left: 15px;
+    margin-left: 20px;
   }
 
   .content {

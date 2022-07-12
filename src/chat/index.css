@@ -132,3 +132,17 @@
     text-align: left;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .popup__inner {
+    left: 18%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .popup__inner {
+    left: 10%;
+    top: 30%;
+    bottom: 30%;
+  }
+}

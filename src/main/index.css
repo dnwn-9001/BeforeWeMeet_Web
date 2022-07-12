@@ -135,3 +135,32 @@
     margin: 10px;
   }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .expert {
+    margin-left: 30px;
+    text-align: center;
+  }
+
+  .content__title {
+    margin-left: 5px;
+  }
+
+  .content {
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .content__box {
+    width: 300px;
+  }
+
+  .content__box__dtl__div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content__box__dtl__div__img {
+    margin: 10px;
+  }
+}

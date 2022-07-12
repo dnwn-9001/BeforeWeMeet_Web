@@ -21,7 +21,8 @@ youtube api와 axios,antd,react-slider,React-router-dom 라이브러리의 활�
 ### :page_with_curl: 사용 기술 및 개발 환경 :page_with_curl:
 
 <img src="https://img.shields.io/badge/-React-black?style=flat-square&logo=React&logoColor=#61DAFB"/> <img src="https://img.shields.io/badge/-Node.js-yellow?style=flat-square&logo=Node.js&logoColor=black"/> <img src="https://img.shields.io/badge/-Nodemon-F7DF1E?style=flat-square&logo=Nodemon&logoColor=#76D04B"/> <img src="https://img.shields.io/badge/-Express-blue?style=flat-square&logo=Express&logoColor=#000000"/> </br> <img src="https://img.shields.io/badge/-JavaScript-white?style=flat-square&logo=JavaScript&logoColor=#F7DF1E"/> <img src="https://img.shields.io/badge/-HTML5-beige?style=flat-square&logo=HTML5&logoColor=#E34F26"/> <img src="https://img.shields.io/badge/-CSS3-grey?style=flat-square&logo=CSS3&logoColor=#1572B6"/> <img src="https://img.shields.io/badge/-GitHub-pink?style=flat-square&logo=GitHub&logoColor=#181717"/> </br> <img src="https://img.shields.io/badge/-Visual Studio-orange?style=flat-square&logo=Visual Studio&logoColor=#5C2D91"/> 
-<img src="https://img.shields.io/badge/-Heroku-navy?style=flat-square&logo=Heroku&logoColor=#430098"/> <img src="https://img.shields.io/badge/-Vercel-purple?style=flat-square&logo=Vercel&logoColor=#000000"/> <img src="https://img.shields.io/badge/-Socket.io-red?style=flat-square&logo=Socket.io&logoColor=#010101"/> 
+<img src="https://img.shields.io/badge/-Heroku-navy?style=flat-square&logo=Heroku&logoColor=#430098"/> <img src="https://img.shields.io/badge/-Vercel-purple?style=flat-square&logo=Vercel&logoColor=#000000"/> <img src="https://img.shields.io/badge/-Socket.io-red?style=flat-square&logo=Socket.io&logoColor=#010101"/> </br>
+서버 git 주소 : https://github.com/dnwn-9001/BeforeWeMeet_Server.git
 
 
 

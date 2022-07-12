@@ -11,6 +11,10 @@
   display: flex;
 }
 
+.expert__profile__dtl {
+  width: 330px;
+}
+
 .expert__profile__dtl__img {
   margin: auto;
   margin-top: 16px;

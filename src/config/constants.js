@@ -5,5 +5,5 @@ export const API_URL =
 
 export const SOCKET_URL =
   process.env.NODE_ENV === "production"
-    ? "https://before-we-meet.herokuapp.com"
+    ? "https://before-we-meet.herokuapp.com:443"
     : "http://localhost:8082";

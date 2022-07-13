@@ -7,7 +7,7 @@ import { Input, Button } from "antd";
 import { SOCKET_URL } from "../config/constants";
 
 // 서버에 연결 요청
-const socket = io.connect(SOCKET_URL, { secure: true });
+const socket = io.connect(SOCKET_URL);
 
 function Chat(props) {
   const text = props.text;

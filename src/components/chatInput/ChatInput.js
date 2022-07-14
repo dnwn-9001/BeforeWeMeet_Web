@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import "../../chat/index.css";
 import { Input, Button } from "antd";
 
-const ChatInput = ({ userName, socket }) => {
+const ChatInput = ({ socket }) => {
   const [chatMessage, setChatMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     socket.emit("onSend", {
-      userName: userName ? userName : localStorage.getItem("userName"),
       msg: chatMessage,
       timeStamp: new Date().toLocaleTimeString(),
     });

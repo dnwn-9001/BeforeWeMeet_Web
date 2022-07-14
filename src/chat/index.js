@@ -28,6 +28,7 @@ function Chat(props) {
   useEffect(() => {
     socket.on("receive message", (message) => {
       cnt++;
+      console.log("message : " + message);
       setChatArr((chatArr) => chatArr.concat(message));
     });
   }, []);

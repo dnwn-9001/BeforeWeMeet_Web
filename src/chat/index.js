@@ -9,11 +9,19 @@ import { SOCKET_URL } from "../config/constants";
 // 서버에 연결 요청
 const socket = io.connect();
 
+socket.io.on("error", (error) => {
+  console.log("error:" + error);
+});
+
+socket.io.on("reconnect_error", (error) => {
+  console.log("reconnect_error :" + error);
+});
+
 function Chat(props) {
   const text = props.text;
   const close = props.closePopup;
 
-  const [chatArr, setChatArr] = useState([]);
+  let [chatArr, setChatArr] = useState([]);
   let [chat, setChat] = useState("");
   let cnt = 0;
 
@@ -27,8 +35,10 @@ function Chat(props) {
   //receive message 이벤트에 대한 콜백을 등록해줌
   useEffect(() => {
     socket.on("receive message", (message) => {
-      cnt++;
+      const engine = socket.io.engine;
+      console.log("engine.transport.name: " + engine.transport.name);
       console.log("message : " + message);
+      cnt++;
       setChatArr((chatArr) => chatArr.concat(message));
     });
   }, []);

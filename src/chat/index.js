@@ -15,18 +15,6 @@ const Chat = (props) => {
   // 소켓 연결하기
   useEffect(() => {
     setCurrentSocket(socketIOClient());
-
-    currentSocket.on("error", (error) => {
-      console.log("error:" + error);
-    });
-
-    currentSocket.on("reconnect", (attempt) => {
-      console.log("reconnect_attempt:" + attempt);
-    });
-
-    currentSocket.on("reconnect_error", (error) => {
-      console.log("reconnect_error:" + error);
-    });
   }, []);
 
   if (currentSocket) {

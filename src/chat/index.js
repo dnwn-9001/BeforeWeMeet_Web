@@ -16,15 +16,15 @@ const Chat = (props) => {
   useEffect(() => {
     setCurrentSocket(socketIOClient());
 
-    socket.io.on("error", (error) => {
+    currentSocket.on("error", (error) => {
       console.log("error:" + error);
     });
 
-    socket.io.on("reconnect", (attempt) => {
+    currentSocket.on("reconnect", (attempt) => {
       console.log("reconnect_attempt:" + attempt);
     });
 
-    socket.io.on("reconnect_error", (error) => {
+    currentSocket.on("reconnect_error", (error) => {
       console.log("reconnect_error:" + error);
     });
   }, []);

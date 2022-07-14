@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import io from "socket.io-client"; // 소켓 생성
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -34,18 +34,27 @@ function Chat(props) {
   }, []);
 
   //버튼을 클릭시 send message이벤트 발생 -> 서버측에서 socket.on으로 받음.
-  const buttonHandler = useCallback(() => {
+  // const buttonHandler = useCallback(() => {
+  //   socket.emit("send message", chat);
+  //   setChat("");
+  // }, [chat]);
+
+  const buttonHandler = () => {
     socket.emit("send message", chat);
     setChat("");
-  }, [chat]);
+  };
 
   // useCallback(함수, 배열): 첫번째 인자로 넘어온 함수를, 두번째 인자로 넘어온 배열 내의 값이 변경될 때까지 저장해놓고 재사용할 수 있게 해줌.
-  const changeMessage = useCallback(
-    (e) => {
-      setChat(e.target.value);
-    },
-    [chat]
-  );
+  // const changeMessage = useCallback(
+  //   (e) => {
+  //     setChat(e.target.value);
+  //   },
+  //   [chat]
+  // );
+
+  const changeMessage = (e) => {
+    setChat(e.target.value);
+  };
 
   return (
     <div className="popup">

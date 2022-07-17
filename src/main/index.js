@@ -214,6 +214,7 @@ function Contents() {
                       href={`https://www.youtube.com/watch?v=${id}`}
                       target="_blank"
                       key={id}
+                      rel="noopener noreferrer"
                     >
                       <img
                         className="content__box__dtl__div__img"
@@ -255,4 +256,34 @@ function LikeContents() {
     </Like>
   );
 }
-export { Contents, MultipleItems, LikeContents };
+
+function Entertain() {
+  return (
+    <div className="entertain">
+      <div className="content__title">
+        <h1>Entertain</h1>
+      </div>
+      <div className="entertain__card">
+        <div className="entertain__card__test">
+          <a
+            href="https://kr.vonvon.me/quiz/19387"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src="images/test.png" alt="test 이미지" />
+          </a>
+        </div>
+        <div className="entertain__card__trip">
+          <a
+            href="https://www.petsgo.kr/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src="images/trip.png" alt="trip 이미지" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+export { Contents, MultipleItems, LikeContents, Entertain };

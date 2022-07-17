@@ -111,6 +111,23 @@
   cursor: pointer;
 }
 
+/* Entertain 영역 */
+.entertain {
+  margin-bottom: 80px;
+}
+.entertain__card {
+  display: flex;
+  justify-content: center;
+}
+
+.entertain__card__test {
+  margin-right: 80px;
+}
+
+.entertain__card__trip {
+  margin-left: 80px;
+}
+
 @media screen and (max-width: 750px) {
   .expert {
     margin-left: 150px;

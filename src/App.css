@@ -35,6 +35,7 @@
 .body__contents {
   width: 1400px;
   margin: auto;
+  /* margin-left: 250px; */
 }
 
 h1 {

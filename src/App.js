@@ -2,7 +2,7 @@ import "./App.css";
 import "antd/dist/antd.css";
 import Logo from "./common/Logo";
 import Footer from "./common/Footer";
-import { Contents, MultipleItems, LikeContents } from "./main";
+import { Contents, MultipleItems, LikeContents, Entertain } from "./main";
 import LoginPage from "./login";
 import JoinPage from "./join";
 import { Account, Like } from "./mypage";
@@ -24,6 +24,7 @@ function App() {
               <div className="body__contents">
                 <MultipleItems />
                 <Contents />
+                <Entertain />
               </div>
             </Route>
 
@@ -45,6 +46,9 @@ function App() {
             </div>
           </>
         </Switch>
+      </div>
+      <div id="card">
+        <div className="card__dtl"></div>
       </div>
 
       <div id="footer">

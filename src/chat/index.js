@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import socketIOClient from "socket.io-client";
+import io from "socket.io-client";
 import ChatInput from "../components/chatInput/ChatInput";
 import ChatLog from "../components/chatLog/ChatLog";
 import Loading from "./Loading";
@@ -14,7 +14,14 @@ const Chat = (props) => {
 
   // 소켓 연결하기
   useEffect(() => {
-    setCurrentSocket(socketIOClient());
+    setCurrentSocket(
+      io("https://api.before-we-meet.herokuapp.com/", {
+        withCredentials: true,
+        extraHeaders: {
+          "my-custom-header": "chat client",
+        },
+      })
+    );
   }, []);
 
   if (currentSocket) {

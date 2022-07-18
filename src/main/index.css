@@ -112,12 +112,11 @@
 }
 
 /* Entertain 영역 */
-.entertain {
-  margin-bottom: 80px;
-}
+
 .entertain__card {
   display: flex;
   justify-content: center;
+  margin-bottom: 80px;
 }
 
 .entertain__card__test {

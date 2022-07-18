@@ -92,6 +92,7 @@ class MultipleItems extends Component {
         },
       ],
     };
+
     return (
       // 전문가 영역
       <div className="expert">

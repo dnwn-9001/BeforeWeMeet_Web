@@ -4,6 +4,7 @@
 :root {
   /* Color */
   --color-yellow: #ffe082;
+  --color-lemon: #fffde7;
   --color-orange: #ff8a65;
   --color-light-orange: #ffbb93;
   --color-light-white: #eeeeee;
@@ -33,14 +34,36 @@
 }
 
 .body__contents {
-  width: 1400px;
-  margin: auto;
-  /* margin-left: 250px; */
+  width: 1200px;
+  /* margin: auto; */
+  margin-left: 250px;
 }
 
 h1 {
   border-bottom: 2px solid var(--color-orange);
   padding: 10px;
+}
+
+#card {
+  width: 350px;
+  position: sticky;
+  top: 20%;
+  left: 80%;
+  right: 10%;
+  bottom: 50%;
+  display: none;
+}
+
+.card__dtl {
+  border: 2px solid transparent;
+  width: 100%;
+  height: 200px;
+  background-color: var(--color-lemon);
+}
+
+.card__dtl__expert {
+  margin: 10px 10px;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 #body {

@@ -15,7 +15,7 @@ const Chat = (props) => {
   // 소켓 연결하기
   useEffect(() => {
     setCurrentSocket(
-      io("https://api.before-we-meet.herokuapp.com/", {
+      io({
         withCredentials: true,
         extraHeaders: {
           "my-custom-header": "chat client",

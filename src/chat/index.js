@@ -10,29 +10,37 @@ const Chat = (props) => {
   const text = props.text;
   const close = props.closePopup;
 
-  const [currentSocket, setCurrentSocket] = useState();
+  //const [currentSocket, setCurrentSocket] = useState();
 
   // 소켓 연결하기
-  useEffect(() => {
-    setCurrentSocket(
-      io({
-        withCredentials: true,
-        extraHeaders: {
-          "my-custom-header": "chat client",
-        },
-      })
-    );
-  }, []);
+  // useEffect(() => {
+  //   setCurrentSocket(
+  //     io({
+  //       withCredentials: true,
+  //       extraHeaders: {
+  //         "my-custom-header": "chat client",
+  //       },
+  //     })
+  //   );
+  // }, []);
 
-  if (currentSocket) {
-    currentSocket.on("connect", () => {
-      currentSocket.emit("join");
+  // 소켓 연결하기
+  const socket = io({
+    withCredentials: true,
+    extraHeaders: {
+      "my-custom-header": "chat client",
+    },
+  });
+
+  if (socket) {
+    socket.on("connect", () => {
+      socket.emit("join");
     });
   }
 
   return (
     <div>
-      {currentSocket ? (
+      {socket ? (
         <>
           <div className="popup">
             <div className="popup__inner">
@@ -46,11 +54,11 @@ const Chat = (props) => {
               </div>
               <div className="popup__inner__message">
                 <div className="popup__inner__message__box">
-                  <ChatLog socket={currentSocket}></ChatLog>
+                  <ChatLog socket={socket}></ChatLog>
                 </div>
               </div>
 
-              <ChatInput socket={currentSocket}></ChatInput>
+              <ChatInput socket={socket}></ChatInput>
             </div>
           </div>
         </>

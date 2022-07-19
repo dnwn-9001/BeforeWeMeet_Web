@@ -25,7 +25,7 @@ const Chat = (props) => {
   // }, []);
 
   // 소켓 연결하기
-  const socket = io({
+  const socket = io("https://before-we-meet-web.vercel.app/", {
     withCredentials: true,
     extraHeaders: {
       "my-custom-header": "chat client",

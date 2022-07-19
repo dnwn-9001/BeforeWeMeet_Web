@@ -34,7 +34,7 @@
 }
 
 .body__contents {
-  width: 1200px;
+  width: 1400px;
   /* margin: auto; */
   margin-left: 250px;
 }
@@ -51,7 +51,7 @@ h1 {
   left: 80%;
   right: 10%;
   bottom: 50%;
-  /* display: none; */
+  display: none;
 }
 
 .card__dtl {

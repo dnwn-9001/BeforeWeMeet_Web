@@ -34,7 +34,7 @@
 }
 
 .body__contents {
-  width: 1400px;
+  width: 1200px;
   /* margin: auto; */
   margin-left: 250px;
 }
@@ -46,24 +46,34 @@ h1 {
 
 #card {
   width: 350px;
-  position: sticky;
-  top: 20%;
+  position: fixed;
+  top: 60%;
   left: 80%;
   right: 10%;
-  bottom: 50%;
-  display: none;
+  bottom: 15%;
 }
 
 .card__dtl {
-  border: 2px solid transparent;
   width: 100%;
-  height: 200px;
-  background-color: var(--color-lemon);
-}
-
-.card__dtl__expert {
+  height: 350px;
   margin: 10px 10px;
   font-family: "Nanum Gothic", sans-serif;
+  font-weight: var(--weight-semi-bold);
+  background-image: url("../public/images/rabbit_speech_bubble.png");
+  background-size: 100% 100%;
+  padding: 150px 30px 10px 50px;
+}
+
+.card__dtl__title {
+  font-size: var(--font-medium);
+  margin-left: 90px;
+}
+
+.card__dtl__discription {
+  font-size: var(--font-regular);
+  margin-top: 35px;
+  padding-left: 25px;
+  padding-right: 16px;
 }
 
 #body {

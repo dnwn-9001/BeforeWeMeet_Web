@@ -96,6 +96,7 @@ class MultipleItems extends Component {
     return (
       // 전문가 영역
       <div className="expert">
+        <div id="expert_btn"></div>
         <div className="content__title">
           <h1>Expert Profile</h1>
         </div>

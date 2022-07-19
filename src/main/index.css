@@ -1,4 +1,14 @@
 /* 전문가 프로필 */
+/* #expert_btn {
+  width: 110px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  top: 1%;
+  left: 42%;
+  cursor: pointer;
+} */
+
 .expert {
   margin-top: 50px;
 }
@@ -121,10 +131,20 @@
 
 .entertain__card__test {
   margin-right: 80px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.entertain__card__test:hover {
+  transform: scale(1.05);
 }
 
 .entertain__card__trip {
   margin-left: 80px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.entertain__card__trip:hover {
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 750px) {

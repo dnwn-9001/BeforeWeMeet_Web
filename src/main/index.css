@@ -324,7 +324,7 @@
 /* 모바일 세로 */
 @media (min-width: 320px) and (max-width: 480px) {
   .expert {
-    margin-left: 45px;
+    margin-left: 10px;
     text-align: center;
   }
 
@@ -364,7 +364,7 @@
 
   .entertain__card__test img,
   .entertain__card__trip img {
-    width: 380px;
+    width: 280px;
   }
 
   .banner__Phrase {
@@ -385,14 +385,14 @@
   }
 
   #expert_btn {
-    left: 150px;
+    left: 30px;
   }
 
   #youtube_btn {
-    left: 290px;
+    left: 170px;
   }
   #entertain_btn {
-    left: 400px;
+    left: 280px;
   }
 
   #expert_btn,

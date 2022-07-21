@@ -367,6 +367,10 @@
     width: 380px;
   }
 
+  .banner__Phrase {
+    margin-left: 10px;
+  }
+
   .banner__Phrase__main {
     font-size: 35px;
   }
@@ -378,5 +382,22 @@
 
   .banner__image {
     width: 400px;
+  }
+
+  #expert_btn {
+    left: 150px;
+  }
+
+  #youtube_btn {
+    left: 290px;
+  }
+  #entertain_btn {
+    left: 400px;
+  }
+
+  #expert_btn,
+  #youtube_btn,
+  #entertain_btn {
+    font-size: 10px;
   }
 }

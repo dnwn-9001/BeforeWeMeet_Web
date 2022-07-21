@@ -26,3 +26,10 @@
   cursor: pointer;
   display: none;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .header__bar__logo {
+    margin-left: 0;
+    width: 60px;
+  }
+}

@@ -110,7 +110,7 @@ h1 {
 
 @media (min-width: 320px) and (max-width: 480px) {
   .body__contents {
-    width: 400px;
-    margin-left: 100px;
+    width: 300px;
+    margin-left: 20px;
   }
 }

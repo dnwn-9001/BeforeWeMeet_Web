@@ -24,8 +24,4 @@ function Logo() {
   );
 }
 
-function Mainbanner() {
-  return <div className={styles.banner}></div>;
-}
-
-export { Logo, Mainbanner };
+export default Logo;

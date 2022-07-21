@@ -1,3 +1,48 @@
+/* 메인배너 */
+.banner {
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.banner__Phrase {
+  font-family: "Nanum Gothic", sans-serif;
+  margin-left: 100px;
+}
+
+.banner__quotes__left {
+  width: 180px;
+  position: absolute;
+  left: 70px;
+  top: 50px;
+}
+
+.banner__quotes__right {
+  width: 180px;
+  position: absolute;
+  left: 700px;
+  top: 250px;
+}
+
+.banner__Phrase__main {
+  font-size: var(--font-large);
+  margin-bottom: 20px;
+}
+
+.banner__Phrase__side {
+  font-size: var(--font-medium);
+}
+
+.banner__image {
+  width: 700px;
+  height: 450px;
+  border-radius: 15px;
+}
+
 #expert_btn {
   width: 110px;
   height: 50px;
@@ -169,10 +214,10 @@
 }
 
 /* Entertain 영역 */
-
 .entertain__card {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
   margin-bottom: 80px;
 }
 

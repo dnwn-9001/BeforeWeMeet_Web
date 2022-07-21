@@ -1,8 +1,14 @@
 import "./App.css";
 import "antd/dist/antd.css";
-import { Logo, Mainbanner } from "./common/Logo";
+import Logo from "./common/Logo";
 import Footer from "./common/Footer";
-import { Contents, MultipleItems, LikeContents, Entertain } from "./main";
+import {
+  Mainbanner,
+  Contents,
+  MultipleItems,
+  LikeContents,
+  Entertain,
+} from "./main";
 import LoginPage from "./login";
 import JoinPage from "./join";
 import { Account, Like } from "./mypage";
@@ -19,7 +25,6 @@ function App() {
   const [topBtnOpacity, setTopBtnOpacity] = useState(0);
   const [bubbleOpacity, setBubbleOpacity] = useState("");
   const topBtn = useRef([]);
-  const descriptionBubble = useRef([]);
 
   const handleScroll = () => {
     const position = window.scrollY;
@@ -50,14 +55,14 @@ function App() {
       });
       setTopBtnOpacity(1);
       setBubbleOpacity("");
-    } else if (scrollPosition < 1100) {
+    } else if (scrollPosition < 1150) {
       setDiscription({
         title: "더위날리기!",
         description: "재밌는 테스트도하고 여행지도 알아보세요!",
       });
       setTopBtnOpacity(1);
       setBubbleOpacity("");
-    } else if (scrollPosition >= 1100) {
+    } else if (scrollPosition >= 1150) {
       setDiscription({
         title: "",
         description: "",
@@ -107,7 +112,7 @@ function App() {
           </>
         </Switch>
       </div>
-      <div id="card" ref={descriptionBubble}>
+      <div id="card">
         <div
           className="card__dtl"
           style={{

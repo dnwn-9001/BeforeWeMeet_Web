@@ -7,6 +7,20 @@ import { Like } from "../mypage";
 import Chat from "../chat";
 import { API_URL } from "../config/constants";
 
+function Mainbanner() {
+  return (
+    <div className="banner">
+      <img className="banner__quotes__left" src="images/quotes1.png" />
+      <div className="banner__Phrase">
+        <p className="banner__Phrase__main">반려동물, 처음이신가요?</p>
+        <p className="banner__Phrase__side">Before We Meet과 함께하세요.</p>
+        <img className="banner__quotes__right" src="images/quotes2.png" />
+      </div>
+      <img src="images/dog_hug.jpg" className="banner__image" />
+    </div>
+  );
+}
+
 // slick-slider 화살표 디자인 변경
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -281,14 +295,14 @@ function Entertain() {
     entertainRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="entertain">
+    <div className="entertain" ref={entertainRef}>
       <div id="entertain_btn" onClick={onEntertainClick}>
         Entertain
       </div>
       <div className="content__title">
         <h1>Entertain</h1>
       </div>
-      <div className="entertain__card" ref={entertainRef}>
+      <div className="entertain__card">
         <div className="entertain__card__test">
           <a
             href="https://kr.vonvon.me/quiz/19387"
@@ -311,4 +325,4 @@ function Entertain() {
     </div>
   );
 }
-export { Contents, MultipleItems, LikeContents, Entertain };
+export { Mainbanner, Contents, MultipleItems, LikeContents, Entertain };

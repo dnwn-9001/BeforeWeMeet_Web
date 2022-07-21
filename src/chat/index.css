@@ -18,8 +18,7 @@
   bottom: 15%;
   margin: auto;
   background: white;
-
-  border-radius: 2%;
+  border-radius: 15px;
 }
 
 .popup__inner__title {
@@ -29,8 +28,8 @@
   top: 0;
   bottom: 90%;
   background-color: var(--color-yellow);
-  border-top-left-radius: 4%;
-  border-top-right-radius: 4%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 
   display: flex;
   justify-content: space-between;
@@ -50,7 +49,6 @@
 }
 
 .popup__inner__message {
-  /* background-color: black; */
   position: absolute;
   left: 0;
   right: 0;
@@ -72,7 +70,6 @@
 .popup__inner__bottom__input {
   width: 97%;
   display: flex;
-  /* align-items: center; */
 }
 
 .popup__inner__bottom__input input {

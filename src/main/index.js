@@ -1,6 +1,6 @@
 import "./index.css";
 import axios from "axios";
-import React, { Component, useState, useEffect } from "react";
+import React, { Component, useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { Button } from "antd";
 import { Like } from "../mypage";
@@ -49,6 +49,7 @@ class MultipleItems extends Component {
       showPopup: false,
       experts: [],
     };
+    this.expertRef = React.createRef();
   }
 
   togglePopup() {
@@ -68,6 +69,10 @@ class MultipleItems extends Component {
         console.log("전문가 데이터 요청이 실패했습니다.");
       });
   }
+
+  onExpertClick = () => {
+    this.expertRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   render() {
     const settings = {
@@ -96,8 +101,10 @@ class MultipleItems extends Component {
     return (
       // 전문가 영역
       <div className="expert">
-        <div id="expert_btn"></div>
-        <div className="content__title">
+        <div id="expert_btn" onClick={this.onExpertClick}>
+          Expert Profile
+        </div>
+        <div className="content__title" ref={this.expertRef}>
           <h1>Expert Profile</h1>
         </div>
         <div className="expert__profile">
@@ -148,6 +155,7 @@ function Contents() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
   const [selected, setSelected] = useState(options[0].value);
+  const youtubeRef = useRef([]);
 
   useEffect(() => {
     axios
@@ -179,10 +187,17 @@ function Contents() {
     setSelected(event.target.value);
   };
 
+  const onYoutubeClick = () => {
+    youtubeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
+      <div id="youtube_btn" onClick={onYoutubeClick}>
+        Youtube
+      </div>
       {/* 유튜브 영역 */}
-      <div className="content">
+      <div className="content" ref={youtubeRef}>
         <div className="content__title">
           <h1>YouTube</h1>
           <select
@@ -260,12 +275,20 @@ function LikeContents() {
 }
 
 function Entertain() {
+  const entertainRef = useRef([]);
+
+  const onEntertainClick = () => {
+    entertainRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="entertain">
+      <div id="entertain_btn" onClick={onEntertainClick}>
+        Entertain
+      </div>
       <div className="content__title">
         <h1>Entertain</h1>
       </div>
-      <div className="entertain__card">
+      <div className="entertain__card" ref={entertainRef}>
         <div className="entertain__card__test">
           <a
             href="https://kr.vonvon.me/quiz/19387"

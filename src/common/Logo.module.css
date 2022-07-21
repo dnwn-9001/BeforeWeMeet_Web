@@ -19,19 +19,6 @@
   left: 39%;
 }
 
-.header__bar__nav li {
-  margin: 0 20px;
-  padding-top: 20px;
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: var(--font-small);
-  transition: all var(--animation-duration) ease-in-out;
-}
-
-.header__bar__nav li:hover {
-  cursor: pointer;
-  color: var(--color-light-grey);
-}
-
 /* user 버튼 */
 #header__bar__user {
   margin: 20px 20px;
@@ -43,8 +30,7 @@
 /* 메인배너 */
 .banner {
   margin: auto;
-  width: 1800px;
+  width: 100%;
   height: 500px;
-  background-color: var(--color-yellow);
-  border-radius: 15px;
+  background-image: url(../../public/images/animals.jpg);
 }

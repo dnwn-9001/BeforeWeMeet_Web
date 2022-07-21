@@ -360,6 +360,7 @@
 
   .entertain__card {
     width: 300px;
+    margin-left: 10px;
   }
 
   .entertain__card__test img,

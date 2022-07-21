@@ -239,10 +239,11 @@
   transform: scale(1.05);
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
   .expert {
-    margin-left: 150px;
+    margin-left: 0px;
     text-align: center;
+    width: 400px;
   }
 
   .content__title {
@@ -250,8 +251,9 @@
   }
 
   .content {
-    margin-left: 110px;
+    margin-left: 0px;
     text-align: center;
+    width: 400px;
   }
 
   .content__box {
@@ -265,6 +267,57 @@
 
   .content__box__dtl__div__img {
     margin: 10px;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner__Phrase {
+    margin-top: 50px;
+  }
+
+  .banner__image {
+    width: 500px;
+  }
+
+  .banner__quotes__left,
+  .banner__quotes__right {
+    width: 50px;
+  }
+
+  .banner__quotes__right {
+    top: 110px;
+    left: 550px;
+  }
+
+  #expert_btn {
+    left: 200px;
+  }
+
+  #youtube_btn {
+    left: 340px;
+  }
+  #entertain_btn {
+    left: 450px;
+  }
+
+  .entertain__card {
+    flex-direction: column;
+  }
+
+  .entertain__card__trip {
+    margin-left: 0;
+  }
+
+  .entertain__card {
+    width: 400px;
+  }
+
+  .entertain__card__test img,
+  .entertain__card__trip img {
+    width: 400px;
   }
 }
 
@@ -295,5 +348,35 @@
 
   .content__box__dtl__div__img {
     margin: 10px;
+  }
+
+  .entertain__card {
+    flex-direction: column;
+  }
+
+  .entertain__card__trip {
+    margin-left: 0;
+  }
+
+  .entertain__card {
+    width: 380px;
+  }
+
+  .entertain__card__test img,
+  .entertain__card__trip img {
+    width: 380px;
+  }
+
+  .banner__Phrase__main {
+    font-size: 35px;
+  }
+
+  .banner__quotes__left,
+  .banner__quotes__right {
+    display: none;
+  }
+
+  .banner__image {
+    width: 400px;
   }
 }

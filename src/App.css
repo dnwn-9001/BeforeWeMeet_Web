@@ -96,3 +96,21 @@ h1 {
   color: var(--color-dark-grey);
   cursor: pointer;
 }
+
+@media screen and (max-width: 750px) {
+  #card {
+    display: none;
+  }
+
+  .body__contents {
+    width: 400px;
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .body__contents {
+    width: 400px;
+    margin-left: 100px;
+  }
+}

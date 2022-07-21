@@ -50,14 +50,14 @@ function App() {
       });
       setTopBtnOpacity(1);
       setBubbleOpacity("");
-    } else if (scrollPosition < 1000) {
+    } else if (scrollPosition < 1100) {
       setDiscription({
         title: "더위날리기!",
         description: "재밌는 테스트도하고 여행지도 알아보세요!",
       });
       setTopBtnOpacity(1);
       setBubbleOpacity("");
-    } else if (scrollPosition >= 1000) {
+    } else if (scrollPosition >= 1100) {
       setDiscription({
         title: "",
         description: "",

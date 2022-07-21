@@ -5,7 +5,7 @@
 ![화면 캡처 2022-07-12 172022](https://user-images.githubusercontent.com/106906742/178501426-abc47540-4c24-4a9b-82eb-f38e756508de.jpg)
 
 ### :zap: Demo :zap:
-https://before-we-meet-e551c8wcy-dnwn-9001.vercel.app/
+https://before-we-meet-web.vercel.app/
 
 
 ### :information_desk_person: 웹 페이지 설명
@@ -40,7 +40,7 @@ youtube api, React-router-dom,axios,antd,react-slick 라이브러리와 socket.i
 
 ### :hammer: 개선하기(~ing) :hammer:
 ~~1.Entertain 영역 추가.</br>~~
-2.페이지 우측에 해당 영역에 대한 설명 배너 넣기.(스크롤시 해당 영역에 맞는 내용으로 변경)</br>
+~~2.페이지 우측에 해당 영역에 대한 설명 배너 넣기.(스크롤시 해당 영역에 맞는 내용으로 변경)</br>~~
 3.회원가입(일반 회원, 전문가), 로그인 기능을 만들어 일반 회원이 전문가와 상담할 수 있도록 구현.</br>
 4.배포 후 socket이 연결되지 않는 문제 해결.
 </div>

@@ -138,8 +138,8 @@
 @media (min-width: 320px) and (max-width: 480px) {
   .popup__inner {
     left: 1%;
-    top: 10%;
-    bottom: 50%;
+    top: 20%;
+    bottom: 45%;
     right: 95%;
   }
 }

@@ -40,6 +40,10 @@ function App() {
 
   useEffect(() => {
     if (scrollPosition === 0) {
+      setDiscription({
+        title: "반려동물 상담!",
+        description: "초보 집사님 곁에 든든한 전문가! ",
+      });
       setTopBtnOpacity(0);
     } else if (scrollPosition < 250) {
       setDiscription({

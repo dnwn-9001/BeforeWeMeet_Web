@@ -10,20 +10,6 @@ const Chat = (props) => {
   const text = props.text;
   const close = props.closePopup;
 
-  //const [currentSocket, setCurrentSocket] = useState();
-
-  // 소켓 연결하기
-  // useEffect(() => {
-  //   setCurrentSocket(
-  //     io({
-  //       withCredentials: true,
-  //       extraHeaders: {
-  //         "my-custom-header": "chat client",
-  //       },
-  //     })
-  //   );
-  // }, []);
-
   // 소켓 연결하기
   const socket = io({
     withCredentials: true,

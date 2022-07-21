@@ -20,7 +20,7 @@
 }
 
 #githubMark {
-  color: var(--color-yellow);
+  color: var(--color-dark-grey);
   margin-bottom: 30px;
   transition: all var(--animation-duration) ease-in-out;
 }

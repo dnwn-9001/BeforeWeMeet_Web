@@ -83,7 +83,7 @@ h1 {
 
 #footer {
   height: 300px;
-  background-color: var(--color-orange);
+  background-color: var(--color-light-orange);
 }
 
 /* top버튼 */
@@ -93,6 +93,6 @@ h1 {
   position: fixed;
   left: 1%;
   bottom: 2%;
-  color: var(--color-yellow);
+  color: var(--color-dark-grey);
   cursor: pointer;
 }

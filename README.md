@@ -2,7 +2,8 @@
 
 <div align="center">
  
-![화면 캡처 2022-07-12 172022](https://user-images.githubusercontent.com/106906742/178501426-abc47540-4c24-4a9b-82eb-f38e756508de.jpg)
+![캡처화면](https://user-images.githubusercontent.com/106906742/180272995-8e7226a7-6e2b-4390-8c50-2b0f12d9a1be.jpg)
+
 
 ### :zap: Demo :zap:
 https://before-we-meet-web.vercel.app/

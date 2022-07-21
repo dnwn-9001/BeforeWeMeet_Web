@@ -359,12 +359,12 @@
   }
 
   .entertain__card {
-    width: 380px;
+    width: 300px;
   }
 
   .entertain__card__test img,
   .entertain__card__trip img {
-    width: 280px;
+    width: 300px;
   }
 
   .banner__Phrase {
@@ -385,14 +385,14 @@
   }
 
   #expert_btn {
-    left: 30px;
+    left: 50px;
   }
 
   #youtube_btn {
     left: 170px;
   }
   #entertain_btn {
-    left: 280px;
+    left: 260px;
   }
 
   #expert_btn,
